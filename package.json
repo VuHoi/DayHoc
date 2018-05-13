@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "8.11.1",
+    "npm":"5.7.1"
+  },
   "scripts": {
     "client": "cd client && npm run start",
     "server": "cd server && node ./bin/www",
