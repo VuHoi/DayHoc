@@ -5,7 +5,7 @@
   "main": "./server/bin/www",
   "engines": {
     "node": "8.11.1",
-    "npm":"5.7.1"
+    "npm": "5.7.1"
   },
   "scripts": {
     "client": "cd client && npm run start",
@@ -19,5 +19,8 @@
     "concurrently": "^3.5.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "http-errors": "^1.6.3"
+  }
 }
