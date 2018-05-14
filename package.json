@@ -9,7 +9,7 @@
   },
   "scripts": {
     "client": "cd client && npm run start",
-    "server": "cd server && node ./bin/www",
+    "server": "cd server && node ./bin/www.js",
     "start": "concurrently --kill-others-on-fail  \"npm run server\" \"npm run client\" ",
     "build": "cd client && npm run build",
     "deploy": "npm run build && git add . && git commit -m \"Building for production\" && git push heroku master",
