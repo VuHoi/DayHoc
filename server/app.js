@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("../client/build"));
 }
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
