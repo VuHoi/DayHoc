@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -26,3 +24,65 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.AppFrame{
+  margin-top: 50px;
+}
+
+body {
+  background: url("../images/bexy.jpg");
+  background-size: 100% 100% ;
+  background-repeat: no-repeat;
+  min-height: 700px;
+}
+/* html,div,span,applet,object,iframe,ul,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+  background: linear-gradient(#c79081,  #dfa579);
+  background-size: cover;
+} */
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.border1{
+  /* border: 50px solid transparent;
+  -webkit-border-image: url("http://thepatternlibrary.com/img/b.jpg") 30 round; */
+margin-top: 340px;
+}
+
+.card:hover{
+  -webkit-filter: brightness(130%);
+  -moz-filter: brightness(130%); 
+  z-index: 100;
+  border: 1px solid whitesmoke;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.425); 
+}
+
+
+
+.background-item{
+  background: url("../images/bexy.jpg");
+}
+
+.background-footer{
+  background-color: rgb(46, 31, 50);
+    height: 200px;
+ box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.425);
+ padding: 10px;
+ z-index: 1000;
+ color: rgb(172,104, 125);
+}
+.theme-button{
+  background-color:rgb(172,104, 125) ;
+  color:  rgb(46, 31, 50);
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.425);
+  padding: 10px;
+  width: 30%;
+}
+
+

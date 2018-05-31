@@ -3,31 +3,34 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var userController =require('./controllers/controller/userController')
+var homeController =require('./controllers/controller/homeController')
 
 var app = express();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("../client/build"));
 }
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express hello hello' });
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
 });
+userController(app);
+homeController(app);
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
- 
+  
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
